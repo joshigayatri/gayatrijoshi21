@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For Avdhut 💛</title>
+
+<style>
+
+body {
+  background: linear-gradient(to bottom,#fbeff1,#ffe6eb);
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  transition: 0.6s;
+}
+
+.card {
+  background: white;
+  padding: 40px;
+  width: 420px;
+  text-align: center;
+  border-radius: 14px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+  animation: fade 0.7s ease;
+}
+
+.hidden { display:none; }
+
+@keyframes fade {
+  from {opacity:0; transform:translateY(15px);}
+  to {opacity:1;}
+}
+
+h1 {
+  color:#ff6b81;
+}
+
+p {
+  line-height:1.7;
+  color:#555;
+}
+
+button {
+  margin-top:15px;
+  padding:12px 30px;
+  border:none;
+  background:#ff6b81;
+  color:white;
+  border-radius:25px;
+  cursor:pointer;
+  font-size:16px;
+  transition:0.3s;
+}
+
+button:hover {
+  transform:scale(1.05);
+  box-shadow:0 8px 18px rgba(0,0,0,0.2);
+}
+
+.big {
+  font-size:70px;
+  animation:bounce 1.2s infinite alternate;
+}
+
+@keyframes bounce {
+  from {transform:translateY(0);}
+  to {transform:translateY(-12px);}
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- PAGE 1 -->
+<div id="page1" class="card">
+
+<h1>Hi Avdhuttt 💛</h1>
+
+<p>
+It’s your Gayuu here 🙈  
+and yes… this is me trying to do something brave for the first time ever.
+</p>
+
+<p>
+I made this just for you 🤍  
+because when something matters to me, I do it properly.
+</p>
+
+<h2>
+I love you 💖 <br>
+Do you accept my proposal,<br>
+Mr. AK 😌✨
+</h2>
+
+<button onclick="startStory()">Yes</button>
+<button onclick="alert('Take your time 🙂')">No</button>
+
+</div>
+
+
+<!-- PAGE 2 -->
+<div id="page2" class="card hidden">
+
+<h1>❤️</h1>
+
+<p>
+Before anything else, you are my best friend — my safest place and my bestest buddy 🤍. 
+With you, everything feels easy and real 🌿. <br><br> 
+
+I choose you not only for happy moments 😊 but for every situation — even difficult ones 🌧️. 
+I promise to stand by you, support you, and believe in you always 🤝. <br><br> 
+
+And yes… you’re lucky 😌 because the girl who cares for you is a little crazy 😜, 
+a little mature 🌸, and loves you deeply 💖. <br><br> 
+
+I don’t want anything dramatic. I just want us — honest, steady, and together 💫.
+</p>
+
+<p style="margin-top:25px;font-style:italic;">
+— Gayatri 💕
+</p>
+
+</div>
+
+
+<!-- PAGE 3 TEDDY -->
+<div id="page3" class="card hidden">
+
+<h1>Happy Teddy Day 🧸</h1>
+
+<div class="big">🧸</div>
+
+<p>
+ yourrrrr Babyyyy 💛  
+This teddy is for you… so when I am not around, you still have something to blame for making you smile."
+</p>
+
+</div>
+
+
+<!-- PAGE 4 ROSE -->
+<div id="page4" class="card hidden">
+
+<h1>Happy Rose Day 🌹</h1>
+
+<div class="big">🌹</div>
+
+<p>
+Gulaab dene ka matlab overthink mat karna,
+Rose Day hai… bas uska attendance laga rahi hoon 😜🌹
+
+Rose Day hai,
+toh ek gulaab banta hai 🌹
+
+
+</p>
+
+</div>
+
+
+<!-- PAGE 5 CHOCOLATE -->
+<div id="page5" class="card hidden">
+
+<h1>Chocolate Day 🍫</h1>
+
+<div class="big">🍫</div>
+
+<p>
+Chocolate dila ek sweet reason mhanun,
+pan tu tuzi ti zop kami kar — he chota sa mission mhanun 💖🍫
+
+</p>
+
+</div>
+
+
+<!-- PAGE 6 END -->
+<div id="page6" class="card hidden">
+
+<h1>Enjoy these days dear 💖</h1>
+
+<p>
+Stay happy always...  
+Byeeee Raja 👑  
+(Mr. AK 😌)
+</p>
+
+</div>
+
+
+<audio id="bgm" src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_115b9a2f02.mp3?filename=romantic-piano-11086.mp3"></audio>
+
+
+<script>
+
+function show(next,current,time){
+setTimeout(()=>{
+document.getElementById(current).classList.add("hidden");
+document.getElementById(next).classList.remove("hidden");
+},time);
+}
+
+function startStory(){
+
+document.body.style.background="#fff5f7";
+
+document.getElementById("page1").classList.add("hidden");
+document.getElementById("page2").classList.remove("hidden");
+
+document.getElementById("bgm").play();
+
+show("page3","page2",6000);
+show("page4","page3",12000);
+show("page5","page4",18000);
+show("page6","page5",24000);
+
+}
+
+</script>
+
+</body>
+</html> is it perfect code 
