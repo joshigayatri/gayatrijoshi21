@@ -34,14 +34,9 @@ body {
   to {opacity:1;}
 }
 
-h1 {
-  color:#ff6b81;
-}
+h1 { color:#ff6b81; }
 
-p {
-  line-height:1.7;
-  color:#555;
-}
+p { line-height:1.7; color:#555; }
 
 button {
   margin-top:15px;
@@ -124,61 +119,55 @@ I don’t want anything dramatic. I just want us — honest, steady, and togethe
 — Gayatri 💕
 </p>
 
+<button onclick="goToPage3()">Next ➜</button>
+
 </div>
 
 
-<!-- PAGE 3 TEDDY -->
+<!-- PAGE 3 -->
 <div id="page3" class="card hidden">
 
 <h1>Happy Teddy Day 🧸</h1>
-
 <div class="big">🧸</div>
 
 <p>
- yourrrrr Babyyyy 💛  
-This teddy is for you… so when I am not around, you still have something to blame for making you smile."
+yourrrrr Babyyyy 💛  
+This teddy is for you… so when I am not around,
+you still have something to blame for making you smile.
 </p>
 
 </div>
 
 
-<!-- PAGE 4 ROSE -->
+<!-- PAGE 4 -->
 <div id="page4" class="card hidden">
 
 <h1>Happy Rose Day 🌹</h1>
-
 <div class="big">🌹</div>
 
 <p>
-Gulaab dene ka matlab overthink mat karna,
-Rose Day hai… bas uska attendance laga rahi hoon 😜🌹
-
-Rose Day hai,
-toh ek gulaab banta hai 🌹
-
-
+Gulaab dene ka matlab overthink mat karna 😜🌹  
+Rose Day hai… bas uska attendance laga rahi hoon.
 </p>
 
 </div>
 
 
-<!-- PAGE 5 CHOCOLATE -->
+<!-- PAGE 5 -->
 <div id="page5" class="card hidden">
 
 <h1>Chocolate Day 🍫</h1>
-
 <div class="big">🍫</div>
 
 <p>
-Chocolate dila ek sweet reason mhanun,
+Chocolate dila ek sweet reason mhanun,  
 pan tu tuzi ti zop kami kar — he chota sa mission mhanun 💖🍫
-
 </p>
 
 </div>
 
 
-<!-- PAGE 6 END -->
+<!-- PAGE 6 -->
 <div id="page6" class="card hidden">
 
 <h1>Enjoy these days dear 💖</h1>
@@ -197,13 +186,6 @@ Byeeee Raja 👑
 
 <script>
 
-function show(next,current,time){
-setTimeout(()=>{
-document.getElementById(current).classList.add("hidden");
-document.getElementById(next).classList.remove("hidden");
-},time);
-}
-
 function startStory(){
 
 document.body.style.background="#fff5f7";
@@ -212,15 +194,25 @@ document.getElementById("page1").classList.add("hidden");
 document.getElementById("page2").classList.remove("hidden");
 
 document.getElementById("bgm").play();
+}
 
-show("page3","page2",6000);
-show("page4","page3",12000);
-show("page5","page4",18000);
-show("page6","page5",24000);
+function goToPage3(){
 
+document.getElementById("page2").classList.add("hidden");
+document.getElementById("page3").classList.remove("hidden");
+
+/* Auto Flow पुढील pages */
+setTimeout(()=>{show("page4","page3")},5000);
+setTimeout(()=>{show("page5","page4")},10000);
+setTimeout(()=>{show("page6","page5")},15000);
+}
+
+function show(next,current){
+document.getElementById(current).classList.add("hidden");
+document.getElementById(next).classList.remove("hidden");
 }
 
 </script>
 
 </body>
-</html> is it perfect code 
+</html>
