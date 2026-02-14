@@ -161,9 +161,8 @@ a heart that chose you, slowly, and called it love.<br><br>
 </div>
 
 <!-- Background Music -->
-<audio id="bgm" loop>
-  <source src="rangrez.mp3" type="audio/mpeg">
-</audio>
+<audio id="bgm" src="rangrez.mp3" loop></audio>
+
 
 <script>
 function openEnvelope(){
@@ -172,7 +171,8 @@ function openEnvelope(){
   // play music
   var music = document.getElementById("bgm");
   music.volume = 0.5;
-  music.play();
+ music.play().catch(function(){});
+
 
   setTimeout(() => {
     document.getElementById("envelope").style.display = "none";
