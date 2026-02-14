@@ -1,218 +1,210 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>For Avdhut 💛</title>
+<title>Our First Valentine 💛</title>
 
 <style>
-
 body {
-  background: linear-gradient(to bottom,#fbeff1,#ffe6eb);
+  margin: 0;
   font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #fbeff1, #ffe6eb);
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  margin: 0;
+  overflow: hidden;
+}
+
+/* Floating hearts */
+.heart {
+  position: fixed;
+  bottom: -20px;
+  font-size: 18px;
+  color: #ff6b81;
+  animation: floatUp 6s linear infinite;
+}
+
+@keyframes floatUp {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-110vh);
+    opacity: 0;
+  }
+}
+
+/* Envelope */
+.envelope {
+  position: relative;
+  width: 280px;
+  height: 180px;
+  background: #ff6b81;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+  text-align: center;
+  z-index: 2;
+}
+
+.flap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 140px solid transparent;
+  border-right: 140px solid transparent;
+  border-bottom: 90px solid #ff8fa3;
+  transform-origin: top;
   transition: 0.6s;
 }
 
+.envelope.open .flap {
+  transform: rotateX(180deg);
+}
+
+.title {
+  position: absolute;
+  width: 100%;
+  top: 70px;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Card */
 .card {
   background: white;
-  padding: 40px;
+  padding: 35px;
   width: 420px;
   text-align: center;
   border-radius: 14px;
   box-shadow: 0 15px 30px rgba(0,0,0,0.15);
-  animation: fade 0.7s ease;
+  display: none;
+  animation: fade 0.8s ease;
+  z-index: 2;
 }
-
-.hidden { display:none; }
 
 @keyframes fade {
-  from {opacity:0; transform:translateY(15px);}
-  to {opacity:1;}
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; }
 }
 
-h1 { color:#ff6b81; }
+h1 { color: #ff6b81; }
 
-p { line-height:1.7; color:#555; }
-
-button {
-  margin-top:15px;
-  padding:12px 30px;
-  border:none;
-  background:#ff6b81;
-  color:white;
-  border-radius:25px;
-  cursor:pointer;
-  font-size:16px;
-  transition:0.3s;
+p {
+  line-height: 1.7;
+  color: #555;
 }
 
-button:hover {
-  transform:scale(1.05);
-  box-shadow:0 8px 18px rgba(0,0,0,0.2);
+.poem-title {
+  margin-top: 15px;
+  font-weight: bold;
+  color: #ff6b81;
 }
 
-.big {
-  font-size:70px;
-  animation:bounce 1.2s infinite alternate;
+.poem {
+  margin-top: 10px;
+  background: #fff5f7;
+  padding: 18px;
+  border-radius: 10px;
+  font-style: italic;
+  line-height: 1.8;
 }
-
-@keyframes bounce {
-  from {transform:translateY(0);}
-  to {transform:translateY(-12px);}
-}
-
 </style>
 </head>
 
 <body>
 
-<!-- PAGE 1 -->
-<div id="page1" class="card">
+<!-- Floating hearts container -->
+<div id="hearts"></div>
 
-<h1>Hi Avdhuttt 💛</h1>
+<!-- Envelope -->
+<div id="envelope" class="envelope" onclick="openEnvelope()">
+  <div class="flap"></div>
+  <div class="title">Our First Valentine 💌</div>
+</div>
+
+<!-- Card Content -->
+<div id="card" class="card">
+
+<h1>Happy Valentine’s Day ❤️</h1>
 
 <p>
-It’s your Gayuu here 🙈  
-and yes… this is me trying to do something brave for the first time ever.
+Avdhut,<br>
+on this Valentine’s Day, I just want to say that you’ve quietly become someone very special to me.<br>
+You make my days feel lighter, my thoughts calmer, and my smiles a little more real.<br>
+No big promises, no dramatic words…<br>
+just a simple feeling that life feels better with you in it. 💛 love uhhhh soo much meri jan
 </p>
 
-<p>
-I made this just for you 🤍  
-because when something matters to me, I do it properly.
-</p>
+<div class="poem-title">
+tuzyasathich faktt raja…
+</div>
 
-<h2>
-I love you 💖 <br>
-Do you accept my proposal,<br>
-Mr. AK 😌✨
-</h2>
+<div class="poem">
+Our first Valentine…<br>
+no grand scenes, no perfect lines,<br>
+just a quiet feeling in my heart<br>
+that somehow everything feels better when you’re a part.<br><br>
 
-<button onclick="startStory()">Yes</button>
-<button onclick="alert('Take your time 🙂')">No</button>
+You came into my life so naturally,<br>
+like a habit I never want to change,<br>
+turning ordinary days into softer ones,<br>
+without doing anything too strange.<br><br>
+
+Sometimes you’re my calm,<br>
+sometimes my reason to smile,<br>
+and without even trying,<br>
+you’ve made my world lighter all the while.<br><br>
+
+So on this first Valentine,<br>
+I don’t promise the stars or the sky above,<br>
+I just promise something simple and true—<br>
+a heart that chose you, slowly, and called it love.<br><br>
+
+— Gayatri 💛
+</div>
 
 </div>
 
-
-<!-- PAGE 2 -->
-<div id="page2" class="card hidden">
-
-<h1>❤️</h1>
-
-<p>
-Before anything else, you are my best friend — my safest place and my bestest buddy 🤍. 
-With you, everything feels easy and real 🌿. <br><br> 
-
-I choose you not only for happy moments 😊 but for every situation — even difficult ones 🌧️. 
-I promise to stand by you, support you, and believe in you always 🤝. <br><br> 
-
-And yes… you’re lucky 😌 because the girl who cares for you is a little crazy 😜, 
-a little mature 🌸, and loves you deeply 💖. <br><br> 
-
-I don’t want anything dramatic. I just want us — honest, steady, and together 💫.
-</p>
-
-<p style="margin-top:25px;font-style:italic;">
-— Gayatri 💕
-</p>
-
-<button onclick="goToPage3()">Next ➜</button>
-
-</div>
-
-
-<!-- PAGE 3 -->
-<div id="page3" class="card hidden">
-
-<h1>Happy Teddy Day 🧸</h1>
-<div class="big">🧸</div>
-
-<p>
-yourrrrr Babyyyy 💛  
-This teddy is for you… so when I am not around,
-you still have something to blame for making you smile.
-</p>
-
-</div>
-
-
-<!-- PAGE 4 -->
-<div id="page4" class="card hidden">
-
-<h1>Happy Rose Day 🌹</h1>
-<div class="big">🌹</div>
-
-<p>
-Gulaab dene ka matlab overthink mat karna 😜🌹  
-Rose Day hai… bas uska attendance laga rahi hoon.
-</p>
-
-</div>
-
-
-<!-- PAGE 5 -->
-<div id="page5" class="card hidden">
-
-<h1>Chocolate Day 🍫</h1>
-<div class="big">🍫</div>
-
-<p>
-Chocolate dila ek sweet reason mhanun,  
-pan tu tuzi ti zop kami kar — he chota sa mission mhanun 💖🍫
-</p>
-
-</div>
-
-
-<!-- PAGE 6 -->
-<div id="page6" class="card hidden">
-
-<h1>Enjoy these days dear 💖</h1>
-
-<p>
-Stay happy always...  
-Byeeee Raja 👑  
-(Mr. AK 😌)
-</p>
-
-</div>
-
-
-<audio id="bgm" src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_115b9a2f02.mp3?filename=romantic-piano-11086.mp3"></audio>
-
+<!-- Background Music -->
+<audio id="bgm" loop>
+  <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_115b9a2f02.mp3" type="audio/mpeg">
+</audio>
 
 <script>
+function openEnvelope(){
+  document.getElementById("envelope").classList.add("open");
 
-function startStory(){
+  const music = document.getElementById("bgm");
+  music.volume = 0.4;
+  music.play().catch(()=>{});
 
-document.body.style.background="#fff5f7";
-
-document.getElementById("page1").classList.add("hidden");
-document.getElementById("page2").classList.remove("hidden");
-
-document.getElementById("bgm").play();
+  setTimeout(() => {
+    document.getElementById("envelope").style.display = "none";
+    document.getElementById("card").style.display = "block";
+  }, 700);
 }
 
-function goToPage3(){
+/* Floating hearts generator */
+function createHeart(){
+  const heart = document.createElement("div");
+  heart.classList.add("heart");
+  heart.innerHTML = "❤";
+  heart.style.left = Math.random()*100 + "vw";
+  heart.style.animationDuration = (4 + Math.random()*3) + "s";
+  document.body.appendChild(heart);
 
-document.getElementById("page2").classList.add("hidden");
-document.getElementById("page3").classList.remove("hidden");
-
-/* Auto Flow पुढील pages */
-setTimeout(()=>{show("page4","page3")},5000);
-setTimeout(()=>{show("page5","page4")},10000);
-setTimeout(()=>{show("page6","page5")},15000);
+  setTimeout(()=>{heart.remove();},7000);
 }
 
-function show(next,current){
-document.getElementById(current).classList.add("hidden");
-document.getElementById(next).classList.remove("hidden");
-}
-
+setInterval(createHeart, 400);
 </script>
 
 </body>
-</html>
+    </html>
