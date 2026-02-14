@@ -40,7 +40,6 @@ body {
   cursor: pointer;
   box-shadow: 0 15px 30px rgba(0,0,0,0.2);
   text-align: center;
-  z-index: 2;
 }
 
 .flap {
@@ -79,7 +78,6 @@ body {
   box-shadow: 0 15px 30px rgba(0,0,0,0.15);
   display: none;
   animation: fade 0.8s ease;
-  z-index: 2;
 }
 
 @keyframes fade {
@@ -93,28 +91,10 @@ p {
   line-height: 1.7;
   color: #555;
 }
-
-.poem-title {
-  margin-top: 15px;
-  font-weight: bold;
-  color: #ff6b81;
-}
-
-.poem {
-  margin-top: 10px;
-  background: #fff5f7;
-  padding: 18px;
-  border-radius: 10px;
-  font-style: italic;
-  line-height: 1.8;
-}
 </style>
 </head>
 
 <body>
-
-<!-- Floating hearts -->
-<div id="hearts"></div>
 
 <!-- Envelope -->
 <div id="envelope" class="envelope" onclick="openEnvelope()">
@@ -130,42 +110,17 @@ p {
 <p>
 Avdhut,<br>
 on this Valentine’s Day, I just want to say that you’ve quietly become someone very special to me.<br>
-You make my days feel lighter, my thoughts calmer, and my smiles a little more real.<br>
-No big promises, no dramatic words…<br>
-just a simple feeling that life feels better with you in it. 💛
+Life feels lighter and better with you in it. 💛
 </p>
 
-<div class="poem-title">
-tuzyasathich faktt raja…
 </div>
 
-<div class="poem">
-Our first Valentine…<br>
-no grand scenes, no perfect lines,<br>
-just a quiet feeling in my heart<br>
-that somehow everything feels better when you’re a part.<br><br>
-
-Sometimes you’re my calm,<br>
-sometimes my reason to smile,<br>
-and without even trying,<br>
-you’ve made my world lighter all the while.<br><br>
-
-So on this first Valentine,<br>
-I don’t promise the stars or the sky above,<br>
-I just promise something simple and true—<br>
-a heart that chose you, slowly, and called it love.<br><br>
-
-— Gayatri 💛
-</div>
-
-</div>
-
-<!-- YouTube Background Music -->
+<!-- YouTube Music (hidden) -->
 <iframe
   id="ytmusic"
   width="0"
   height="0"
-  src="https://www.youtube.com/embed/gT4J2XK6l6k?autoplay=1&loop=1&playlist=gT4J2XK6l6k"
+  src=""
   frameborder="0"
   allow="autoplay">
 </iframe>
@@ -174,26 +129,16 @@ a heart that chose you, slowly, and called it love.<br><br>
 function openEnvelope(){
   document.getElementById("envelope").classList.add("open");
 
+  // Start music after click
+  document.getElementById("ytmusic").src =
+    "https://www.youtube.com/embed/gT4J2XK6l6k?autoplay=1&loop=1&playlist=gT4J2XK6l6k";
+
   setTimeout(() => {
     document.getElementById("envelope").style.display = "none";
     document.getElementById("card").style.display = "block";
   }, 700);
 }
-
-/* Floating hearts */
-function createHeart(){
-  const heart = document.createElement("div");
-  heart.classList.add("heart");
-  heart.innerHTML = "❤";
-  heart.style.left = Math.random()*100 + "vw";
-  heart.style.animationDuration = (4 + Math.random()*3) + "s";
-  document.body.appendChild(heart);
-  setTimeout(()=>{heart.remove();},7000);
-}
-
-setInterval(createHeart, 400);
 </script>
 
 </body>
 </html>
-
