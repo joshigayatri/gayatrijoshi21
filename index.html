@@ -16,20 +16,6 @@ body {
   overflow: hidden;
 }
 
-/* Floating hearts */
-.heart {
-  position: fixed;
-  bottom: -20px;
-  font-size: 18px;
-  color: #ff6b81;
-  animation: floatUp 6s linear infinite;
-}
-
-@keyframes floatUp {
-  from { transform: translateY(0); opacity: 1; }
-  to { transform: translateY(-110vh); opacity: 0; }
-}
-
 /* Envelope */
 .envelope {
   position: relative;
@@ -104,7 +90,6 @@ p {
 
 <!-- Card -->
 <div id="card" class="card">
-
 <h1>Happy Valentine’s Day ❤️</h1>
 
 <p>
@@ -112,10 +97,9 @@ Avdhut,<br>
 on this Valentine’s Day, I just want to say that you’ve quietly become someone very special to me.<br>
 Life feels lighter and better with you in it. 💛
 </p>
-
 </div>
 
-<!-- YouTube Music (hidden) -->
+<!-- YouTube Music -->
 <iframe
   id="ytmusic"
   width="0"
@@ -129,9 +113,9 @@ Life feels lighter and better with you in it. 💛
 function openEnvelope(){
   document.getElementById("envelope").classList.add("open");
 
-  // Start music after click
+  // Start O Rangrez song after click
   document.getElementById("ytmusic").src =
-    "https://www.youtube.com/embed/gT4J2XK6l6k?autoplay=1&loop=1&playlist=gT4J2XK6l6k";
+    "https://www.youtube.com/embed/5idNBcKDtvA?autoplay=1&loop=1&playlist=5idNBcKDtvA";
 
   setTimeout(() => {
     document.getElementById("envelope").style.display = "none";
