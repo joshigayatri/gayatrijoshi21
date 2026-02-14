@@ -160,19 +160,19 @@ a heart that chose you, slowly, and called it love.<br><br>
 
 </div>
 
-<!-- music container -->
-<div id="music"></div>
+<!-- Background Music -->
+<audio id="bgm" loop>
+  <source src="rangrez.mp3" type="audio/mpeg">
+</audio>
 
 <script>
 function openEnvelope(){
   document.getElementById("envelope").classList.add("open");
 
-  // English romantic instrumental (autoplay safe)
-  document.getElementById("music").innerHTML = `
-    <iframe width="0" height="0"
-    src="https://www.youtube.com/embed/4V2s6J5KqH4?autoplay=1&mute=0&loop=1&playlist=4V2s6J5KqH4"
-    frameborder="0" allow="autoplay"></iframe>
-  `;
+  // play music
+  var music = document.getElementById("bgm");
+  music.volume = 0.5;
+  music.play();
 
   setTimeout(() => {
     document.getElementById("envelope").style.display = "none";
